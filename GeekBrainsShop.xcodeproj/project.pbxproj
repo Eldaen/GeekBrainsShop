@@ -14,6 +14,7 @@
 		D0B4806528101EBF0083B8BA /* GeekBrainsShopTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B4806428101EBF0083B8BA /* GeekBrainsShopTests.swift */; };
 		D0B4806F28101EBF0083B8BA /* GeekBrainsShopUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B4806E28101EBF0083B8BA /* GeekBrainsShopUITests.swift */; };
 		D0B4807128101EBF0083B8BA /* GeekBrainsShopUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B4807028101EBF0083B8BA /* GeekBrainsShopUITestsLaunchTests.swift */; };
+		D0D653A928118C05008C7E2F /* AbstractErrorParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D653A828118C05008C7E2F /* AbstractErrorParser.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +46,7 @@
 		D0B4806A28101EBF0083B8BA /* GeekBrainsShopUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GeekBrainsShopUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0B4806E28101EBF0083B8BA /* GeekBrainsShopUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeekBrainsShopUITests.swift; sourceTree = "<group>"; };
 		D0B4807028101EBF0083B8BA /* GeekBrainsShopUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeekBrainsShopUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		D0D653A828118C05008C7E2F /* AbstractErrorParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbstractErrorParser.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +138,7 @@
 		D0D6539F2810495E008C7E2F /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				D0D653A728118BEF008C7E2F /* Network */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -183,6 +186,14 @@
 			children = (
 			);
 			path = Flows;
+			sourceTree = "<group>";
+		};
+		D0D653A728118BEF008C7E2F /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				D0D653A828118C05008C7E2F /* AbstractErrorParser.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -315,6 +326,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0D653A928118C05008C7E2F /* AbstractErrorParser.swift in Sources */,
 				D0B4804E28101EBD0083B8BA /* AppDelegate.swift in Sources */,
 				D0B4805028101EBD0083B8BA /* SceneDelegate.swift in Sources */,
 			);

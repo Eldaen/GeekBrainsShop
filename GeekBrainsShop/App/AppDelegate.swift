@@ -23,6 +23,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 				print(error.localizedDescription)
 			}
 		}
+		
+		auth.register(username: "Somebody",
+					  password: "mypassword",
+					  email: "some@some.ru",
+					  gender: .male,
+					  creditCard: "9872389-2424-234224-234",
+					  bio: "This is good! I think I will switch to another language") { response in
+			switch response.result {
+			case .success(let result):
+				print(result)
+			case .failure(let error):
+				print(error)
+			}
+		}
+		
 		return true
 	}
 	

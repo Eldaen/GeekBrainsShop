@@ -20,4 +20,9 @@ struct User: Codable {
 		case name = "user_name"
 		case lastname = "user_lastname"
 	}
+	
+	enum Genders: String {
+		case male = "m"
+		case female = "f"
+	}
 }

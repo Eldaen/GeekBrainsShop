@@ -26,6 +26,7 @@
 		D0D653BD281198EB008C7E2F /* AuthRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D653BC281198EB008C7E2F /* AuthRequestFactory.swift */; };
 		D0D653BF2811992D008C7E2F /* Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D653BE2811992D008C7E2F /* Auth.swift */; };
 		D0D653C128119BC9008C7E2F /* RequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D653C028119BC9008C7E2F /* RequestFactory.swift */; };
+		D0D653C32816973E008C7E2F /* RegisterResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D653C22816973E008C7E2F /* RegisterResult.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +69,7 @@
 		D0D653BC281198EB008C7E2F /* AuthRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRequestFactory.swift; sourceTree = "<group>"; };
 		D0D653BE2811992D008C7E2F /* Auth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Auth.swift; sourceTree = "<group>"; };
 		D0D653C028119BC9008C7E2F /* RequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestFactory.swift; sourceTree = "<group>"; };
+		D0D653C22816973E008C7E2F /* RegisterResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterResult.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -195,6 +197,7 @@
 			children = (
 				D0D653B728119880008C7E2F /* LoginResult.swift */,
 				D0D653B9281198AC008C7E2F /* User.swift */,
+				D0D653C22816973E008C7E2F /* RegisterResult.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -379,6 +382,7 @@
 				D0D653B628119844008C7E2F /* CustomDecodableSerializer.swift in Sources */,
 				D0D653B428119245008C7E2F /* RequestRouter.swift in Sources */,
 				D0B4804E28101EBD0083B8BA /* AppDelegate.swift in Sources */,
+				D0D653C32816973E008C7E2F /* RegisterResult.swift in Sources */,
 				D0B4805028101EBD0083B8BA /* SceneDelegate.swift in Sources */,
 				D0D653B828119880008C7E2F /* LoginResult.swift in Sources */,
 				D0D653B228119138008C7E2F /* AbstractRequestFactory.swift in Sources */,

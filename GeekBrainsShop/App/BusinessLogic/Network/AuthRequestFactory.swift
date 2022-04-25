@@ -30,4 +30,15 @@ protocol AuthRequestFactory {
 				  (AFDataResponse<RegisterResult>) -> Void
 	)
 	
+	/// Изменить данные пользователя
+	func changeUserData(username: String,
+						password: String,
+				  email: String,
+				  gender: User.Genders,
+				  creditCard: String,
+				  bio: String,
+				  completionHandler: @escaping
+				  (AFDataResponse<ChangeUserDataResult>) -> Void
+	)
+	
 }

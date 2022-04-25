@@ -35,12 +35,6 @@ final class Auth: AbstractRequestFactory {
 
 // MARK: - AuthRequestFactory
 extension Auth: AuthRequestFactory {
-	func logout(completionHandler: @escaping (AFDataResponse<LogoutResult>) -> Void) {
-		let requestModel = Logout(baseUrl: baseUrl)
-		
-		self.request(request: requestModel, completionHandler: completionHandler)
-	}
-	
 	func register(username: String,
 				  password: String,
 				  email: String,
@@ -59,14 +53,38 @@ extension Auth: AuthRequestFactory {
 		self.request(request: requestModel, completionHandler: completionHandler)
 	}
 	
-	func login(
-		userName: String,
-		password: String,
-		completionHandler: @escaping (AFDataResponse<LoginResult>) -> Void) {
-			let requestModel = Login(baseUrl: baseUrl,
-									 login: userName,
-									 password: password)
-			
-			self.request(request: requestModel, completionHandler: completionHandler)
-		}
+	func changeUserData(username: String,
+						password: String,
+						email: String,
+						gender: User.Genders,
+						creditCard: String,
+						bio: String,
+						completionHandler: @escaping (AFDataResponse<ChangeUserDataResult>) -> Void) {
+		let requestModel = Register(baseUrl: baseUrl,
+									login: username,
+									password: password,
+									email: email,
+									gender: gender,
+									creditCard: creditCard,
+									bio: bio)
+		
+		self.request(request: requestModel, completionHandler: completionHandler)
+	}
+	
+	func login(userName: String,
+			   password: String,
+			   completionHandler: @escaping (AFDataResponse<LoginResult>) -> Void) {
+		let requestModel = Login(baseUrl: baseUrl,
+								 login: userName,
+								 password: password)
+		
+		self.request(request: requestModel, completionHandler: completionHandler)
+	}
+	
+	func logout(completionHandler: @escaping (AFDataResponse<LogoutResult>) -> Void) {
+		let requestModel = Logout(baseUrl: baseUrl)
+		
+		self.request(request: requestModel, completionHandler: completionHandler)
+	}
+	
 }

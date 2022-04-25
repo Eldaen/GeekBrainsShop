@@ -31,6 +31,8 @@
 		D0D653C82816AC9C008C7E2F /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D653C72816AC9C008C7E2F /* Login.swift */; };
 		D0D653CA2816ACE4008C7E2F /* Register.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D653C92816ACE4008C7E2F /* Register.swift */; };
 		D0D653CC2816AD09008C7E2F /* Logout.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D653CB2816AD09008C7E2F /* Logout.swift */; };
+		D0D653CE2816ADA9008C7E2F /* ChangeUserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D653CD2816ADA9008C7E2F /* ChangeUserData.swift */; };
+		D0D653D02816AE30008C7E2F /* ChangeUserDataResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D653CF2816AE2F008C7E2F /* ChangeUserDataResult.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +80,8 @@
 		D0D653C72816AC9C008C7E2F /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		D0D653C92816ACE4008C7E2F /* Register.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Register.swift; sourceTree = "<group>"; };
 		D0D653CB2816AD09008C7E2F /* Logout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logout.swift; sourceTree = "<group>"; };
+		D0D653CD2816ADA9008C7E2F /* ChangeUserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeUserData.swift; sourceTree = "<group>"; };
+		D0D653CF2816AE2F008C7E2F /* ChangeUserDataResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeUserDataResult.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -207,6 +211,7 @@
 				D0D653B9281198AC008C7E2F /* User.swift */,
 				D0D653C22816973E008C7E2F /* RegisterResult.swift */,
 				D0D653C42816A5E2008C7E2F /* LogoutResult.swift */,
+				D0D653CF2816AE2F008C7E2F /* ChangeUserDataResult.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -255,6 +260,7 @@
 				D0D653C72816AC9C008C7E2F /* Login.swift */,
 				D0D653C92816ACE4008C7E2F /* Register.swift */,
 				D0D653CB2816AD09008C7E2F /* Logout.swift */,
+				D0D653CD2816ADA9008C7E2F /* ChangeUserData.swift */,
 			);
 			path = RequestModels;
 			sourceTree = "<group>";
@@ -395,12 +401,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0D653CE2816ADA9008C7E2F /* ChangeUserData.swift in Sources */,
 				D0D653BD281198EB008C7E2F /* AuthRequestFactory.swift in Sources */,
 				D0D653CC2816AD09008C7E2F /* Logout.swift in Sources */,
 				D0D653CA2816ACE4008C7E2F /* Register.swift in Sources */,
 				D0D653A928118C05008C7E2F /* AbstractErrorParser.swift in Sources */,
 				D0D653AD28118EA8008C7E2F /* DataRequest+Extension.swift in Sources */,
 				D0D653C52816A5E2008C7E2F /* LogoutResult.swift in Sources */,
+				D0D653D02816AE30008C7E2F /* ChangeUserDataResult.swift in Sources */,
 				D0D653C128119BC9008C7E2F /* RequestFactory.swift in Sources */,
 				D0D653B628119844008C7E2F /* CustomDecodableSerializer.swift in Sources */,
 				D0D653B428119245008C7E2F /* RequestRouter.swift in Sources */,

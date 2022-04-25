@@ -35,6 +35,12 @@ final class Auth: AbstractRequestFactory {
 
 // MARK: - AuthRequestFactory
 extension Auth: AuthRequestFactory {
+	func logout(completionHandler: @escaping (AFDataResponse<LogoutResult>) -> Void) {
+		let requestModel = Logout(baseUrl: baseUrl)
+		
+		self.request(request: requestModel, completionHandler: completionHandler)
+	}
+	
 	func register(username: String,
 				  password: String,
 				  email: String,
@@ -63,49 +69,4 @@ extension Auth: AuthRequestFactory {
 			
 			self.request(request: requestModel, completionHandler: completionHandler)
 		}
-}
-
-// MARK: - Auth extension
-extension Auth {
-	
-	/// Структура для описания запроса авторизации пользователя
-	struct Login: RequestRouter {
-		let baseUrl: URL
-		let method: HTTPMethod = .get
-		let path: String = "login.json"
-		let login: String
-		let password: String
-		var parameters: Parameters? {
-			return [
-				"username": login,
-				"password": password
-			]
-		}
-	}
-	
-	/// Структура для отправки запроса на регистрацию пользователя
-	struct Register: RequestRouter {
-		var baseUrl: URL
-		var method: HTTPMethod = .get
-		var path: String = "registerUser.json"
-		let id = "123"
-		let login: String
-		let password: String
-		let email: String
-		let gender: User.Genders
-		let creditCard: String
-		let bio: String
-		
-		var parameters: Parameters? {
-			return [
-				"id_user": id,
-				"username": login,
-				"password": password,
-				"email": email,
-				"gender": gender.rawValue,
-				"credit_card": creditCard,
-				"bio": bio
-			]
-		}
-	}
 }

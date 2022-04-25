@@ -15,6 +15,10 @@ protocol AuthRequestFactory {
 	func login(userName: String, password: String, completionHandler: @escaping
 			   (AFDataResponse<LoginResult>) -> Void)
 	
+	/// Разлогинить пользователя
+	func logout(completionHandler: @escaping
+			   (AFDataResponse<LogoutResult>) -> Void)
+	
 	/// Зарегистрировать пользователя
 	func register(username: String,
 				  password: String,

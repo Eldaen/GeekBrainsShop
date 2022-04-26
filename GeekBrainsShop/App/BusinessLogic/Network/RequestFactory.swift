@@ -27,7 +27,7 @@ final class RequestFactory {
 	func makeErrorParser() -> AbstractErrorParser {
 		return ErrorParser()
 	}
-
+	
 	/// Возвращает запрос "Войти"
 	func makeAuthRequestFatory() -> AuthRequestFactory {
 		let errorParser = makeErrorParser()

@@ -17,7 +17,7 @@ protocol AuthRequestFactory {
 	
 	/// Разлогинить пользователя
 	func logout(completionHandler: @escaping
-			   (AFDataResponse<LogoutResult>) -> Void)
+				(AFDataResponse<LogoutResult>) -> Void)
 	
 	/// Зарегистрировать пользователя
 	func register(username: String,
@@ -33,12 +33,12 @@ protocol AuthRequestFactory {
 	/// Изменить данные пользователя
 	func changeUserData(username: String,
 						password: String,
-				  email: String,
-				  gender: User.Genders,
-				  creditCard: String,
-				  bio: String,
-				  completionHandler: @escaping
-				  (AFDataResponse<ChangeUserDataResult>) -> Void
+						email: String,
+						gender: User.Genders,
+						creditCard: String,
+						bio: String,
+						completionHandler: @escaping
+						(AFDataResponse<ChangeUserDataResult>) -> Void
 	)
 	
 }

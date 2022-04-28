@@ -12,16 +12,16 @@ class UserAuthTests: XCTestCase {
 	
 	var requestFactory: RequestFactory!
 	var auth: AuthRequestFactory!
-
-    override func setUpWithError() throws {
+	
+	override func setUpWithError() throws {
 		requestFactory = RequestFactory()
 		auth = requestFactory.makeAuthRequestFatory()
-    }
-
-    override func tearDownWithError() throws {
-        requestFactory = nil
+	}
+	
+	override func tearDownWithError() throws {
+		requestFactory = nil
 		auth = nil
-    }
+	}
 	
 	/// Проверяет авторизацию с корректными данными
 	/// Корректность данных проверить не можем, смотрим только успешный ответ

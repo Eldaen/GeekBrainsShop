@@ -93,4 +93,65 @@ class UserAuthTests: XCTestCase {
 			XCTAssertEqual(message, "Регистрация прошла успешно!")
 		}
 	}
+	
+	/// Проверяет успешный выход пользователя
+	func testLogout() throws {
+		// Given
+		var logoutResult: Int?
+		let validatorExpectation = expectation(description: #function)
+		
+		// When
+		auth.logout { response in
+			switch response.result {
+			case .success(let result):
+				logoutResult = result.result
+				validatorExpectation.fulfill()
+			case .failure(let error):
+				print(error)
+			}
+		}
+		
+		//Then
+		waitForExpectations(timeout: 1.0) { error in
+			if error != nil {
+				XCTFail()
+			}
+			
+			XCTAssertEqual(logoutResult ?? 0, 1)
+		}
+	}
+	
+	/// Проверяет успешное изменение данных пользователя
+	func testCorrectСhangeUserData() throws {
+		// Given
+		var changeDataResult: Int?
+		let validatorExpectation = expectation(description: #function)
+		
+		// When
+		auth.changeUserData(
+			username: "Somebody",
+			password: "mypassword",
+			email: "some@some.ru",
+			gender: .male,
+			creditCard: "9872389-2424-234224-234",
+			bio: "This is good! I think I will switch to another language"
+		) { response in
+			switch response.result {
+			case .success(let result):
+				changeDataResult = result.result
+				validatorExpectation.fulfill()
+			case .failure(let error):
+				print(error)
+			}
+		}
+		
+		//Then
+		waitForExpectations(timeout: 1.0) { error in
+			if error != nil {
+				XCTFail()
+			}
+			
+			XCTAssertEqual(changeDataResult ?? 0, 1)
+		}
+	}
 }

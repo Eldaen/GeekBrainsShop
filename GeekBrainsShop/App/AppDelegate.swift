@@ -40,6 +40,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 			}
 		}
 		
+		auth.logout { response in
+			switch response.result {
+			case .success(let result):
+				print(result)
+			case .failure(let error):
+				print(error)
+			}
+		}
+		
 		auth.changeUserData(
 			username: "Somebody",
 			password: "mypassword",

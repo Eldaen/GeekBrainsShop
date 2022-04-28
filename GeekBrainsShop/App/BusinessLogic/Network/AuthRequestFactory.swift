@@ -20,25 +20,28 @@ protocol AuthRequestFactory {
 				(AFDataResponse<LogoutResult>) -> Void)
 	
 	/// Зарегистрировать пользователя
-	func register(username: String,
-				  password: String,
-				  email: String,
-				  gender: User.Genders,
-				  creditCard: String,
-				  bio: String,
-				  completionHandler: @escaping
-				  (AFDataResponse<RegisterResult>) -> Void
+	func register(
+		username: String,
+		password: String,
+		email: String,
+		gender: User.Genders,
+		creditCard: String,
+		bio: String,
+		completionHandler: @escaping
+		(AFDataResponse<RegisterResult>
+		) -> Void
 	)
 	
 	/// Изменить данные пользователя
-	func changeUserData(username: String,
-						password: String,
-						email: String,
-						gender: User.Genders,
-						creditCard: String,
-						bio: String,
-						completionHandler: @escaping
-						(AFDataResponse<ChangeUserDataResult>) -> Void
+	func changeUserData(
+		username: String,
+		password: String,
+		email: String,
+		gender: User.Genders,
+		creditCard: String,
+		bio: String,
+		completionHandler: @escaping
+		(AFDataResponse<ChangeUserDataResult>
+		) -> Void
 	)
-	
 }

@@ -8,7 +8,7 @@
 import Foundation
 import Alamofire
 
-/// Занимается обработкой запроса "Войти"
+/// Управляет авторизацией
 final class Auth: AbstractRequestFactory {
 	
 	// MARK: - constants
@@ -23,9 +23,11 @@ final class Auth: AbstractRequestFactory {
 	)!
 	
 	// MARK: - Init
-	init(errorParser: AbstractErrorParser,
-		 sessionManager: Session,
-		 queue: DispatchQueue = DispatchQueue.global(qos: .utility)
+	init(
+		errorParser: AbstractErrorParser,
+		sessionManager: Session,
+		queue: DispatchQueue = DispatchQueue.global(qos: .utility
+		)
 	) {
 		self.errorParser = errorParser
 		self.sessionManager = sessionManager
@@ -35,13 +37,15 @@ final class Auth: AbstractRequestFactory {
 
 // MARK: - AuthRequestFactory
 extension Auth: AuthRequestFactory {
-	func register(username: String,
-				  password: String,
-				  email: String,
-				  gender: User.Genders,
-				  creditCard: String,
-				  bio: String,
-				  completionHandler: @escaping (AFDataResponse<RegisterResult>) -> Void) {
+	func register(
+		username: String,
+		password: String,
+		email: String,
+		gender: User.Genders,
+		creditCard: String,
+		bio: String,
+		completionHandler: @escaping (AFDataResponse<RegisterResult>
+		) -> Void) {
 		let requestModel = Register(baseUrl: baseUrl,
 									login: username,
 									password: password,
@@ -53,13 +57,15 @@ extension Auth: AuthRequestFactory {
 		self.request(request: requestModel, completionHandler: completionHandler)
 	}
 	
-	func changeUserData(username: String,
-						password: String,
-						email: String,
-						gender: User.Genders,
-						creditCard: String,
-						bio: String,
-						completionHandler: @escaping (AFDataResponse<ChangeUserDataResult>) -> Void) {
+	func changeUserData(
+		username: String,
+		password: String,
+		email: String,
+		gender: User.Genders,
+		creditCard: String,
+		bio: String,
+		completionHandler: @escaping (AFDataResponse<ChangeUserDataResult>
+		) -> Void) {
 		let requestModel = Register(baseUrl: baseUrl,
 									login: username,
 									password: password,
@@ -71,9 +77,11 @@ extension Auth: AuthRequestFactory {
 		self.request(request: requestModel, completionHandler: completionHandler)
 	}
 	
-	func login(userName: String,
-			   password: String,
-			   completionHandler: @escaping (AFDataResponse<LoginResult>) -> Void) {
+	func login(
+		userName: String,
+		password: String,
+		completionHandler: @escaping (AFDataResponse<LoginResult>
+		) -> Void) {
 		let requestModel = Login(baseUrl: baseUrl,
 								 login: userName,
 								 password: password)
@@ -86,5 +94,4 @@ extension Auth: AuthRequestFactory {
 		
 		self.request(request: requestModel, completionHandler: completionHandler)
 	}
-	
 }

@@ -24,12 +24,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 			}
 		}
 		
-		auth.register(username: "Somebody",
-					  password: "mypassword",
-					  email: "some@some.ru",
-					  gender: .male,
-					  creditCard: "9872389-2424-234224-234",
-					  bio: "This is good! I think I will switch to another language") { response in
+		auth.register(
+			username: "Somebody",
+			password: "mypassword",
+			email: "some@some.ru",
+			gender: .male,
+			creditCard: "9872389-2424-234224-234",
+			bio: "This is good! I think I will switch to another language"
+		) { response in
 			switch response.result {
 			case .success(let result):
 				print(result)
@@ -38,12 +40,37 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 			}
 		}
 		
-		auth.changeUserData(username: "Somebody",
-							password: "mypassword",
-							email: "some@some.ru",
-							gender: .male,
-							creditCard: "9872389-2424-234224-234",
-							bio: "This is good! I think I will switch to another language") { response in
+		auth.logout { response in
+			switch response.result {
+			case .success(let result):
+				print(result)
+			case .failure(let error):
+				print(error)
+			}
+		}
+		
+		auth.changeUserData(
+			username: "Somebody",
+			password: "mypassword",
+			email: "some@some.ru",
+			gender: .male,
+			creditCard: "9872389-2424-234224-234",
+			bio: "This is good! I think I will switch to another language"
+		) { response in
+			switch response.result {
+			case .success(let result):
+				print(result)
+			case .failure(let error):
+				print(error)
+			}
+		}
+		
+		let products = requestFactory.makeProductDataRequestFactory()
+		
+		products.loadProducts(
+			pageNumber: 1,
+			categoryId: 1
+		) { response in
 			switch response.result {
 			case .success(let result):
 				print(result)
@@ -56,7 +83,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 	}
 	
 	// MARK: UISceneSession Lifecycle
-	
 	func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
 		// Called when a new scene session is being created.
 		// Use this method to select a configuration to create the new scene with.
@@ -68,7 +94,4 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		// If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
 		// Use this method to release any resources that were specific to the discarded scenes, as they will not return.
 	}
-	
-	
 }
-

@@ -12,14 +12,17 @@ import Alamofire
 extension DataRequest {
 	
 	@discardableResult
-	func responseCodable<T: Decodable>(errorParser: AbstractErrorParser,
-									   queue: DispatchQueue = .main,
-									   completionHandler: @escaping (AFDataResponse<T>) -> Void
+	func responseCodable<T: Decodable>(
+		errorParser: AbstractErrorParser,
+		queue: DispatchQueue = .main,
+		completionHandler: @escaping (AFDataResponse<T>
+		) -> Void
 	) -> Self {
 		let responseSerializer = CustomDecodableSerializer<T>(errorParser: errorParser)
-		return response(queue: queue,
-						responseSerializer: responseSerializer,
-						completionHandler: completionHandler
+		return response(
+			queue: queue,
+			responseSerializer: responseSerializer,
+			completionHandler: completionHandler
 		)
 	}
 }

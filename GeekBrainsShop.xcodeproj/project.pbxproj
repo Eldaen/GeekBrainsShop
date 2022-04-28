@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D0B326E8281A952F007E5140 /* ProductManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B326E7281A952F007E5140 /* ProductManager.swift */; };
+		D0B326EA281A95B8007E5140 /* ProductRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B326E9281A95B8007E5140 /* ProductRequestFactory.swift */; };
+		D0B326F0281A9725007E5140 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B326EF281A9725007E5140 /* Product.swift */; };
+		D0B326F4281A97CF007E5140 /* CatalogData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B326F3281A97CF007E5140 /* CatalogData.swift */; };
 		D0B4804E28101EBD0083B8BA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B4804D28101EBD0083B8BA /* AppDelegate.swift */; };
 		D0B4805028101EBD0083B8BA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B4804F28101EBD0083B8BA /* SceneDelegate.swift */; };
 		D0B4805728101EBF0083B8BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0B4805628101EBF0083B8BA /* Assets.xcassets */; };
@@ -53,6 +57,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D0B326E7281A952F007E5140 /* ProductManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductManager.swift; sourceTree = "<group>"; };
+		D0B326E9281A95B8007E5140 /* ProductRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductRequestFactory.swift; sourceTree = "<group>"; };
+		D0B326EF281A9725007E5140 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		D0B326F3281A97CF007E5140 /* CatalogData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogData.swift; sourceTree = "<group>"; };
 		D0B4804A28101EBD0083B8BA /* GeekBrainsShop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GeekBrainsShop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0B4804D28101EBD0083B8BA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D0B4804F28101EBD0083B8BA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -110,6 +118,45 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D0B326EB281A9684007E5140 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				D0D653B728119880008C7E2F /* LoginResult.swift */,
+				D0D653B9281198AC008C7E2F /* User.swift */,
+				D0D653C22816973E008C7E2F /* RegisterResult.swift */,
+				D0D653C42816A5E2008C7E2F /* LogoutResult.swift */,
+				D0D653CF2816AE2F008C7E2F /* ChangeUserDataResult.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		D0B326EC281A9692007E5140 /* Product */ = {
+			isa = PBXGroup;
+			children = (
+				D0B326EF281A9725007E5140 /* Product.swift */,
+			);
+			path = Product;
+			sourceTree = "<group>";
+		};
+		D0B326F1281A97B2007E5140 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				D0D653C72816AC9C008C7E2F /* Login.swift */,
+				D0D653C92816ACE4008C7E2F /* Register.swift */,
+				D0D653CB2816AD09008C7E2F /* Logout.swift */,
+				D0D653CD2816ADA9008C7E2F /* ChangeUserData.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		D0B326F2281A97C3007E5140 /* Product */ = {
+			isa = PBXGroup;
+			children = (
+				D0B326F3281A97CF007E5140 /* CatalogData.swift */,
+			);
+			path = Product;
+			sourceTree = "<group>";
+		};
 		D0B4804128101EBD0083B8BA = {
 			isa = PBXGroup;
 			children = (
@@ -207,11 +254,8 @@
 		D0D653A3281049EF008C7E2F /* Entity */ = {
 			isa = PBXGroup;
 			children = (
-				D0D653B728119880008C7E2F /* LoginResult.swift */,
-				D0D653B9281198AC008C7E2F /* User.swift */,
-				D0D653C22816973E008C7E2F /* RegisterResult.swift */,
-				D0D653C42816A5E2008C7E2F /* LogoutResult.swift */,
-				D0D653CF2816AE2F008C7E2F /* ChangeUserDataResult.swift */,
+				D0B326EC281A9692007E5140 /* Product */,
+				D0B326EB281A9684007E5140 /* Auth */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -250,6 +294,8 @@
 				D0D653BC281198EB008C7E2F /* AuthRequestFactory.swift */,
 				D0D653BE2811992D008C7E2F /* Auth.swift */,
 				D0D653C028119BC9008C7E2F /* RequestFactory.swift */,
+				D0B326E7281A952F007E5140 /* ProductManager.swift */,
+				D0B326E9281A95B8007E5140 /* ProductRequestFactory.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -257,10 +303,8 @@
 		D0D653C62816AC77008C7E2F /* RequestModels */ = {
 			isa = PBXGroup;
 			children = (
-				D0D653C72816AC9C008C7E2F /* Login.swift */,
-				D0D653C92816ACE4008C7E2F /* Register.swift */,
-				D0D653CB2816AD09008C7E2F /* Logout.swift */,
-				D0D653CD2816ADA9008C7E2F /* ChangeUserData.swift */,
+				D0B326F2281A97C3007E5140 /* Product */,
+				D0B326F1281A97B2007E5140 /* Auth */,
 			);
 			path = RequestModels;
 			sourceTree = "<group>";
@@ -405,6 +449,8 @@
 				D0D653BD281198EB008C7E2F /* AuthRequestFactory.swift in Sources */,
 				D0D653CC2816AD09008C7E2F /* Logout.swift in Sources */,
 				D0D653CA2816ACE4008C7E2F /* Register.swift in Sources */,
+				D0B326EA281A95B8007E5140 /* ProductRequestFactory.swift in Sources */,
+				D0B326F4281A97CF007E5140 /* CatalogData.swift in Sources */,
 				D0D653A928118C05008C7E2F /* AbstractErrorParser.swift in Sources */,
 				D0D653AD28118EA8008C7E2F /* DataRequest+Extension.swift in Sources */,
 				D0D653C52816A5E2008C7E2F /* LogoutResult.swift in Sources */,
@@ -416,7 +462,9 @@
 				D0D653C32816973E008C7E2F /* RegisterResult.swift in Sources */,
 				D0B4805028101EBD0083B8BA /* SceneDelegate.swift in Sources */,
 				D0D653B828119880008C7E2F /* LoginResult.swift in Sources */,
+				D0B326F0281A9725007E5140 /* Product.swift in Sources */,
 				D0D653B228119138008C7E2F /* AbstractRequestFactory.swift in Sources */,
+				D0B326E8281A952F007E5140 /* ProductManager.swift in Sources */,
 				D0D653BA281198AC008C7E2F /* User.swift in Sources */,
 				D0D653AB28118CC7008C7E2F /* ErrorParser.swift in Sources */,
 				D0D653BF2811992D008C7E2F /* Auth.swift in Sources */,

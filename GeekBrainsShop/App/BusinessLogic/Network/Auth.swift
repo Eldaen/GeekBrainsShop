@@ -8,7 +8,7 @@
 import Foundation
 import Alamofire
 
-/// Занимается обработкой запроса "Войти"
+/// Управляет авторизацией
 final class Auth: AbstractRequestFactory {
 	
 	// MARK: - constants

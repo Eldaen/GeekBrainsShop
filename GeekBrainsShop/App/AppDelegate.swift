@@ -56,6 +56,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 			}
 		}
 		
+		let products = requestFactory.makeProductDataRequestFactory()
+		
+		products.loadProducts(
+			pageNumber: 1,
+			categoryId: 1
+		) { response in
+			switch response.result {
+			case .success(let result):
+				print(result)
+			case .failure(let error):
+				print(error)
+			}
+		}
+		
 		return true
 	}
 	

@@ -11,7 +11,7 @@ import Alamofire
 /// Структура для описания запроса каталога товаров
 struct CatalogData: RequestRouter {
 	let baseUrl: URL
-	let method: HTTPMethod = .get
+	let method: HTTPMethod = .post
 	let path: String = "loadProducts"
 	let pageNumber: Int
 	let categoryId: Int

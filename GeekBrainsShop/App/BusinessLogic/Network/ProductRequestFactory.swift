@@ -15,6 +15,6 @@ protocol ProductRequestFactory {
 	func loadProducts(
 		pageNumber: Int,
 		categoryId: Int,
-		completionHandler: @escaping (AFDataResponse<[Product]>
+		completionHandler: @escaping (AFDataResponse<LoadProductsResult>
 		) -> Void)
 }

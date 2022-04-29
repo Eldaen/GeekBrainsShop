@@ -11,7 +11,7 @@ import Alamofire
 /// Структура для описания запроса авторизации пользователя
 struct Login: RequestRouter {
 	let baseUrl: URL
-	let method: HTTPMethod = .get
+	let method: HTTPMethod = .post
 	let path: String = "login"
 	let login: String
 	let password: String

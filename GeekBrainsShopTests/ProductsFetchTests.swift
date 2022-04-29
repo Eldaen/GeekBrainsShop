@@ -45,7 +45,7 @@ class ProductsFetchTests: XCTestCase {
 		) { response in
 			switch response.result {
 			case .success(let result):
-				products = result
+				products = result.products
 				validatorExpectation.fulfill()
 			case .failure(let error):
 				print(error)

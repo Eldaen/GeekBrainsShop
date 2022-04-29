@@ -12,7 +12,7 @@ import Alamofire
 struct Register: RequestRouter {
 	var baseUrl: URL
 	var method: HTTPMethod = .get
-	var path: String = "registerUser.json"
+	var path: String = "register"
 	let id = "123"
 	let login: String
 	let password: String

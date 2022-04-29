@@ -19,7 +19,7 @@ final class ProductManager: AbstractRequestFactory {
 	
 	/// Базовый URL запроса
 	let baseUrl = URL(
-		string: "https://raw.githubusercontent.com/GeekBrainsTutorial/online-store-api/master/responses/"
+		string: "https://sizov-denis-gb-shop.herokuapp.com/"
 	)!
 	
 	// MARK: - Init

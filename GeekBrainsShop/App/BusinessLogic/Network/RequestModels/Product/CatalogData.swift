@@ -12,7 +12,7 @@ import Alamofire
 struct CatalogData: RequestRouter {
 	let baseUrl: URL
 	let method: HTTPMethod = .get
-	let path: String = "catalogData.json"
+	let path: String = "loadProducts"
 	let pageNumber: Int
 	let categoryId: Int
 	var parameters: Parameters? {

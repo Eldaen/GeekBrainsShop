@@ -12,7 +12,7 @@ import Alamofire
 struct ChangeUserData: RequestRouter {
 	var baseUrl: URL
 	var method: HTTPMethod = .get
-	var path: String = "registerUser.json"
+	var path: String = "updateUser"
 	let id = "123"
 	let login: String
 	let password: String

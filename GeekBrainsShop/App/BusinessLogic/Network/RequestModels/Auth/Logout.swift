@@ -12,7 +12,7 @@ import Alamofire
 struct Logout: RequestRouter {
 	var baseUrl: URL
 	var method: HTTPMethod = .get
-	var path: String = "logout.json"
+	var path: String = "logout"
 	let id = "123"
 	
 	var parameters: Parameters? {

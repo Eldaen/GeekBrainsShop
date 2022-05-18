@@ -11,8 +11,8 @@ import Alamofire
 /// Структура для отправки запроса на изменение данных пользователя
 struct ChangeUserData: RequestRouter {
 	var baseUrl: URL
-	var method: HTTPMethod = .get
-	var path: String = "registerUser.json"
+	var method: HTTPMethod = .post
+	var path: String = "updateUser"
 	let id = "123"
 	let login: String
 	let password: String

@@ -11,8 +11,8 @@ import Alamofire
 /// Структура для отправки запроса на логаут пользователя
 struct Logout: RequestRouter {
 	var baseUrl: URL
-	var method: HTTPMethod = .get
-	var path: String = "logout.json"
+	var method: HTTPMethod = .post
+	var path: String = "logout"
 	let id = "123"
 	
 	var parameters: Parameters? {

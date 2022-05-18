@@ -19,7 +19,7 @@ final class ProductManager: AbstractRequestFactory {
 	
 	/// Базовый URL запроса
 	let baseUrl = URL(
-		string: "https://raw.githubusercontent.com/GeekBrainsTutorial/online-store-api/master/responses/"
+		string: "https://sizov-denis-gb-shop.herokuapp.com/"
 	)!
 	
 	// MARK: - Init
@@ -40,7 +40,7 @@ extension ProductManager: ProductRequestFactory {
 	func loadProducts(
 		pageNumber: Int,
 		categoryId: Int,
-		completionHandler: @escaping (AFDataResponse<[Product]>
+		completionHandler: @escaping (AFDataResponse<LoadProductsResult>
 		) -> Void) {
 		let requestModel = CatalogData(baseUrl: baseUrl, pageNumber: pageNumber, categoryId: categoryId)
 		self.request(request: requestModel, completionHandler: completionHandler)

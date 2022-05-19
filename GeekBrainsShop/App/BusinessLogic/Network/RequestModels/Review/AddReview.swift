@@ -17,7 +17,7 @@ struct AddReview: RequestRouter {
 	let reviewText: String
 	var parameters: Parameters? {
 		return [
-			"idUser": userId,
+			"id_user": userId,
 			"text": reviewText
 		]
 	}

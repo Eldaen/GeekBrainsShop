@@ -8,7 +8,7 @@
 import Foundation
 import Alamofire
 
-/// Занимается загрузкой данных о продуктах
+/// Менеджер загрузки данных о данных о продуктах
 final class ProductManager: AbstractRequestFactory {
 	
 	// MARK: - constants

@@ -66,11 +66,35 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		}
 		
 		let products = requestFactory.makeProductDataRequestFactory()
+		products.loadProducts(pageNumber: 1, categoryId: 1) { response in
+			switch response.result {
+			case .success(let result):
+				print(result)
+			case .failure(let error):
+				print(error)
+			}
+		}
 		
-		products.loadProducts(
-			pageNumber: 1,
-			categoryId: 1
-		) { response in
+		let reviews = requestFactory.makeReviewRequestFactory()
+		reviews.sendReview(userId: 123, reviewText: "Geekbrains рулит") { response in
+			switch response.result {
+			case .success(let result):
+				print(result)
+			case .failure(let error):
+				print(error)
+			}
+		}
+		
+		reviews.removeReview(commentId: 123) { response in
+			switch response.result {
+			case .success(let result):
+				print(result)
+			case .failure(let error):
+				print(error)
+			}
+		}
+		
+		reviews.approveReview(commentId: 123) { response in
 			switch response.result {
 			case .success(let result):
 				print(result)

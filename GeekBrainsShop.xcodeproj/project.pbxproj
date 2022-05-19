@@ -22,6 +22,7 @@
 		D0B32737283635F5007E5140 /* RemoveReviewResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B32736283635F5007E5140 /* RemoveReviewResult.swift */; };
 		D0B32739283636B6007E5140 /* ApproveReview.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B32738283636B6007E5140 /* ApproveReview.swift */; };
 		D0B3273B28363717007E5140 /* ApproveReviewResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B3273A28363717007E5140 /* ApproveReviewResult.swift */; };
+		D0B3273D28364A41007E5140 /* ReviewsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B3273C28364A41007E5140 /* ReviewsTests.swift */; };
 		D0B4804E28101EBD0083B8BA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B4804D28101EBD0083B8BA /* AppDelegate.swift */; };
 		D0B4805028101EBD0083B8BA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B4804F28101EBD0083B8BA /* SceneDelegate.swift */; };
 		D0B4805728101EBF0083B8BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0B4805628101EBF0083B8BA /* Assets.xcassets */; };
@@ -83,6 +84,7 @@
 		D0B32736283635F5007E5140 /* RemoveReviewResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveReviewResult.swift; sourceTree = "<group>"; };
 		D0B32738283636B6007E5140 /* ApproveReview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApproveReview.swift; sourceTree = "<group>"; };
 		D0B3273A28363717007E5140 /* ApproveReviewResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApproveReviewResult.swift; sourceTree = "<group>"; };
+		D0B3273C28364A41007E5140 /* ReviewsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewsTests.swift; sourceTree = "<group>"; };
 		D0B4804A28101EBD0083B8BA /* GeekBrainsShop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GeekBrainsShop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0B4804D28101EBD0083B8BA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D0B4804F28101EBD0083B8BA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -264,6 +266,7 @@
 				D0B4806428101EBF0083B8BA /* GeekBrainsShopTests.swift */,
 				D0B326F7281AA049007E5140 /* UserAuthTests.swift */,
 				D0B326F9281AB498007E5140 /* ProductsFetchTests.swift */,
+				D0B3273C28364A41007E5140 /* ReviewsTests.swift */,
 			);
 			path = GeekBrainsShopTests;
 			sourceTree = "<group>";
@@ -559,6 +562,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D0B326F8281AA049007E5140 /* UserAuthTests.swift in Sources */,
+				D0B3273D28364A41007E5140 /* ReviewsTests.swift in Sources */,
 				D0B326FA281AB498007E5140 /* ProductsFetchTests.swift in Sources */,
 				D0B4806528101EBF0083B8BA /* GeekBrainsShopTests.swift in Sources */,
 			);

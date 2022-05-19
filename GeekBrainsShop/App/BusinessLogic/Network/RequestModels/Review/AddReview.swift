@@ -8,7 +8,7 @@
 import Foundation
 import Alamofire
 
-/// Структура для описания запроса каталога товаров
+/// Структура для описания запроса на отправку отзыва на модерацию
 struct AddReview: RequestRouter {
 	let baseUrl: URL
 	let method: HTTPMethod = .get

@@ -1,16 +1,14 @@
 {
-  "object": {
-    "pins": [
-      {
-        "package": "Alamofire",
-        "repositoryURL": "https://github.com/Alamofire/Alamofire.git",
-        "state": {
-          "branch": "master",
-          "revision": "ea4e4142e6ae2166e085d6346466735ac2f16176",
-          "version": null
-        }
+  "pins" : [
+    {
+      "identity" : "alamofire",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Alamofire/Alamofire.git",
+      "state" : {
+        "branch" : "master",
+        "revision" : "ea4e4142e6ae2166e085d6346466735ac2f16176"
       }
-    ]
-  },
-  "version": 1
+    }
+  ],
+  "version" : 2
 }

@@ -18,6 +18,10 @@
 		D0B3272E2835A27C007E5140 /* SendReviewResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B3272D2835A27C007E5140 /* SendReviewResult.swift */; };
 		D0B327302835A319007E5140 /* ReviewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B3272F2835A319007E5140 /* ReviewManager.swift */; };
 		D0B327332835A434007E5140 /* AddReview.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B327322835A434007E5140 /* AddReview.swift */; };
+		D0B32735283634DF007E5140 /* RemoveReview.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B32734283634DE007E5140 /* RemoveReview.swift */; };
+		D0B32737283635F5007E5140 /* RemoveReviewResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B32736283635F5007E5140 /* RemoveReviewResult.swift */; };
+		D0B32739283636B6007E5140 /* ApproveReview.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B32738283636B6007E5140 /* ApproveReview.swift */; };
+		D0B3273B28363717007E5140 /* ApproveReviewResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B3273A28363717007E5140 /* ApproveReviewResult.swift */; };
 		D0B4804E28101EBD0083B8BA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B4804D28101EBD0083B8BA /* AppDelegate.swift */; };
 		D0B4805028101EBD0083B8BA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B4804F28101EBD0083B8BA /* SceneDelegate.swift */; };
 		D0B4805728101EBF0083B8BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0B4805628101EBF0083B8BA /* Assets.xcassets */; };
@@ -75,6 +79,10 @@
 		D0B3272D2835A27C007E5140 /* SendReviewResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendReviewResult.swift; sourceTree = "<group>"; };
 		D0B3272F2835A319007E5140 /* ReviewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewManager.swift; sourceTree = "<group>"; };
 		D0B327322835A434007E5140 /* AddReview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddReview.swift; sourceTree = "<group>"; };
+		D0B32734283634DE007E5140 /* RemoveReview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveReview.swift; sourceTree = "<group>"; };
+		D0B32736283635F5007E5140 /* RemoveReviewResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveReviewResult.swift; sourceTree = "<group>"; };
+		D0B32738283636B6007E5140 /* ApproveReview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApproveReview.swift; sourceTree = "<group>"; };
+		D0B3273A28363717007E5140 /* ApproveReviewResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApproveReviewResult.swift; sourceTree = "<group>"; };
 		D0B4804A28101EBD0083B8BA /* GeekBrainsShop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GeekBrainsShop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0B4804D28101EBD0083B8BA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D0B4804F28101EBD0083B8BA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -176,6 +184,8 @@
 			isa = PBXGroup;
 			children = (
 				D0B327322835A434007E5140 /* AddReview.swift */,
+				D0B32734283634DE007E5140 /* RemoveReview.swift */,
+				D0B32738283636B6007E5140 /* ApproveReview.swift */,
 			);
 			path = Review;
 			sourceTree = "<group>";
@@ -211,6 +221,8 @@
 			isa = PBXGroup;
 			children = (
 				D0B3272D2835A27C007E5140 /* SendReviewResult.swift */,
+				D0B32736283635F5007E5140 /* RemoveReviewResult.swift */,
+				D0B3273A28363717007E5140 /* ApproveReviewResult.swift */,
 			);
 			path = Review;
 			sourceTree = "<group>";
@@ -514,6 +526,7 @@
 				D0B3272E2835A27C007E5140 /* SendReviewResult.swift in Sources */,
 				D0D653CA2816ACE4008C7E2F /* Register.swift in Sources */,
 				D0B326EA281A95B8007E5140 /* ProductRequestFactory.swift in Sources */,
+				D0B32737283635F5007E5140 /* RemoveReviewResult.swift in Sources */,
 				D0B326F4281A97CF007E5140 /* CatalogData.swift in Sources */,
 				D0D653A928118C05008C7E2F /* AbstractErrorParser.swift in Sources */,
 				D0D653AD28118EA8008C7E2F /* DataRequest+Extension.swift in Sources */,
@@ -523,6 +536,8 @@
 				D0D653B628119844008C7E2F /* CustomDecodableSerializer.swift in Sources */,
 				D0D653B428119245008C7E2F /* RequestRouter.swift in Sources */,
 				D0B4804E28101EBD0083B8BA /* AppDelegate.swift in Sources */,
+				D0B3273B28363717007E5140 /* ApproveReviewResult.swift in Sources */,
+				D0B32735283634DF007E5140 /* RemoveReview.swift in Sources */,
 				D0D653C32816973E008C7E2F /* RegisterResult.swift in Sources */,
 				D0B327332835A434007E5140 /* AddReview.swift in Sources */,
 				D0B4805028101EBD0083B8BA /* SceneDelegate.swift in Sources */,
@@ -533,6 +548,7 @@
 				D0D653BA281198AC008C7E2F /* User.swift in Sources */,
 				D0D653AB28118CC7008C7E2F /* ErrorParser.swift in Sources */,
 				D0D653BF2811992D008C7E2F /* Auth.swift in Sources */,
+				D0B32739283636B6007E5140 /* ApproveReview.swift in Sources */,
 				D0B326FC281C5C70007E5140 /* LoadProductsResult.swift in Sources */,
 				D0D653C82816AC9C008C7E2F /* Login.swift in Sources */,
 			);

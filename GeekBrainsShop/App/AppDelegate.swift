@@ -85,6 +85,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 			}
 		}
 		
+		reviews.removeReview(commentId: 123) { response in
+			switch response.result {
+			case .success(let result):
+				print(result)
+			case .failure(let error):
+				print(error)
+			}
+		}
+		
+		reviews.approveReview(commentId: 123) { response in
+			switch response.result {
+			case .success(let result):
+				print(result)
+			case .failure(let error):
+				print(error)
+			}
+		}
+		
 		return true
 	}
 	

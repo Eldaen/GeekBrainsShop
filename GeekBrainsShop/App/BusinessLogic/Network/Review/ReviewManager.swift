@@ -19,7 +19,7 @@ final class ReviewManager: AbstractRequestFactory {
 	
 	/// Базовый URL запроса
 	let baseUrl = URL(
-		string: "https://raw.githubusercontent.com/GeekBrainsTutorial/online-store-api/master/responses/"
+		string: "http://127.0.0.1:8080/"
 	)!
 	
 	// MARK: - Init

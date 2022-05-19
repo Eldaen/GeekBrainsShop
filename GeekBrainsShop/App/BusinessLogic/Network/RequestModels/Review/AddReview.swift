@@ -11,8 +11,8 @@ import Alamofire
 /// Структура для описания запроса на отправку отзыва на модерацию
 struct AddReview: RequestRouter {
 	let baseUrl: URL
-	let method: HTTPMethod = .get
-	let path: String = "addReview.json"
+	let method: HTTPMethod = .post
+	let path: String = "addReview"
 	let userId: Int
 	let reviewText: String
 	var parameters: Parameters? {

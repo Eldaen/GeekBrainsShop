@@ -11,8 +11,8 @@ import Alamofire
 /// Структура для описания запроса на удаление отзыва
 struct RemoveReview: RequestRouter {
 	let baseUrl: URL
-	let method: HTTPMethod = .get
-	let path: String = "removeReview.json"
+	let method: HTTPMethod = .post
+	let path: String = "removeReview"
 	let commentId: Int
 	var parameters: Parameters? {
 		return [

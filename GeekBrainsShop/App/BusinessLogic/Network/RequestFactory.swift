@@ -31,20 +31,18 @@ final class RequestFactory {
 	/// Возвращает запрос к авторизации
 	func makeAuthRequestFatory() -> AuthRequestFactory {
 		let errorParser = makeErrorParser()
-		return Auth(
-			errorParser: errorParser,
-			sessionManager: commonSession,
-			queue: sessionQueue
-		)
+		return Auth(errorParser: errorParser, sessionManager: commonSession, queue: sessionQueue)
 	}
 	
 	/// Возвращает запрос продуктов
 	func makeProductDataRequestFactory() -> ProductRequestFactory {
 		let errorParser = makeErrorParser()
-		return ProductManager(
-			errorParser: errorParser,
-			sessionManager: commonSession,
-			queue: sessionQueue
-		)
+		return ProductManager(errorParser: errorParser, sessionManager: commonSession, queue: sessionQueue)
+	}
+	
+	/// Возвращает запрос отзывов
+	func makeReviewRequestFactory() -> ReviewRequestFactory {
+		let errorParser = makeErrorParser()
+		return ReviewManager(errorParser: errorParser, sessionManager: commonSession, queue: sessionQueue)
 	}
 }

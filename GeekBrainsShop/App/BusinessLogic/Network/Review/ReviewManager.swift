@@ -1,15 +1,15 @@
 //
-//  ProductManager.swift
+//  ReviewManager.swift
 //  GeekBrainsShop
 //
-//  Created by Денис Сизов on 28.04.2022.
+//  Created by Денис Сизов on 19.05.2022.
 //
 
 import Foundation
 import Alamofire
 
-/// Занимается загрузкой данных о продуктах
-final class ProductManager: AbstractRequestFactory {
+/// Менеджер управления отзывами
+final class ReviewManager: AbstractRequestFactory {
 	
 	// MARK: - constants
 	
@@ -19,7 +19,7 @@ final class ProductManager: AbstractRequestFactory {
 	
 	/// Базовый URL запроса
 	let baseUrl = URL(
-		string: "https://sizov-denis-gb-shop.herokuapp.com/"
+		string: "https://raw.githubusercontent.com/GeekBrainsTutorial/online-store-api/master/responses/"
 	)!
 	
 	// MARK: - Init
@@ -36,13 +36,13 @@ final class ProductManager: AbstractRequestFactory {
 }
 
 // MARK: - ProductRequestFactory
-extension ProductManager: ProductRequestFactory {
-	func loadProducts(
-		pageNumber: Int,
-		categoryId: Int,
-		completionHandler: @escaping (AFDataResponse<LoadProductsResult>
-		) -> Void) {
-		let requestModel = CatalogData(baseUrl: baseUrl, pageNumber: pageNumber, categoryId: categoryId)
+extension ReviewManager: ReviewRequestFactory {
+	func sendReview(
+		userId: Int,
+		reviewText: String,
+		completionHandler: @escaping (AFDataResponse<SendReviewResult>) -> Void
+	) {
+		let requestModel = AddReview(baseUrl: baseUrl, userId: userId, reviewText: reviewText)
 		self.request(request: requestModel, completionHandler: completionHandler)
 	}
 }

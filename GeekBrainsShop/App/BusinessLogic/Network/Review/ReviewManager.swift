@@ -37,6 +37,16 @@ final class ReviewManager: AbstractRequestFactory {
 
 // MARK: - ProductRequestFactory
 extension ReviewManager: ReviewRequestFactory {
+	func approveReview(commentId: Int, completionHandler: @escaping (AFDataResponse<ApproveReviewResult>) -> Void) {
+		let requestModel = ApproveReview(baseUrl: baseUrl, commentId: commentId)
+		self.request(request: requestModel, completionHandler: completionHandler)
+	}
+	
+	func removeReview(commentId: Int, completionHandler: @escaping (AFDataResponse<RemoveReviewResult>) -> Void) {
+		let requestModel = RemoveReview(baseUrl: baseUrl, commentId: commentId)
+		self.request(request: requestModel, completionHandler: completionHandler)
+	}
+	
 	func sendReview(
 		userId: Int,
 		reviewText: String,

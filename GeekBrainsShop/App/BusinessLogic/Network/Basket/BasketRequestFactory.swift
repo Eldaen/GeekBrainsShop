@@ -11,10 +11,15 @@ import Alamofire
 /// Протокол загрузки данных товаров
 protocol BasketRequestFactory {
 	
-	/// Загружает каталог товаров
-	func loadProducts(
+	/// Добавляет товар в корзину
+	func addToBasket(
 		productId: Int,
 		quantity: Int,
-		completionHandler: @escaping (AFDataResponse<AddToBasketResult>
-		) -> Void)
+		completionHandler: @escaping (AFDataResponse<AddToBasketResult>) -> Void
+	)
+	
+	func removeFromBasket(
+		productId: Int,
+		completionHandler: @escaping (AFDataResponse<RemoveFromBasketResult>) -> Void
+	)
 }

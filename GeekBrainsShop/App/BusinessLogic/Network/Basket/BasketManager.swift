@@ -37,7 +37,15 @@ final class BasketManager: AbstractRequestFactory {
 
 // MARK: - ProductRequestFactory
 extension BasketManager: BasketRequestFactory {
-	func loadProducts(
+	func removeFromBasket(
+		productId: Int,
+		completionHandler: @escaping (AFDataResponse<RemoveFromBasketResult>) -> Void
+	) {
+		let requestModel = RemoveFromBasket(baseUrl: baseUrl, productId: productId)
+		self.request(request: requestModel, completionHandler: completionHandler)
+	}
+	
+	func addToBasket(
 		productId: Int,
 		quantity: Int,
 		completionHandler: @escaping (AFDataResponse<AddToBasketResult>) -> Void

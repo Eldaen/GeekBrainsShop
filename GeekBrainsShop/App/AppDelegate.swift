@@ -103,6 +103,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 			}
 		}
 		
+		let basket = requestFactory.makeBasketRequestFactory()
+		basket.loadProducts(productId: 123, quantity: 1) { response in
+			switch response.result {
+			case .success(let result):
+				print(result)
+			case .failure(let error):
+				print(error)
+			}
+		}
+		
 		return true
 	}
 	

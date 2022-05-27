@@ -45,4 +45,10 @@ final class RequestFactory {
 		let errorParser = makeErrorParser()
 		return ReviewManager(errorParser: errorParser, sessionManager: commonSession, queue: sessionQueue)
 	}
+	
+	/// Возвращает запрос корзины
+	func makeBasketRequestFactory() -> BasketRequestFactory {
+		let errorParser = makeErrorParser()
+		return BasketManager(errorParser: errorParser, sessionManager: commonSession, queue: sessionQueue)
+	}
 }
